@@ -1,0 +1,9 @@
+package com.xworkz.onetoone;
+
+public class StudentTester {
+
+	public StudentTester() {
+		// TODO Auto-generated constructor stub
+	}
+
+}

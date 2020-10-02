@@ -1,0 +1,46 @@
+package com.xworkz.customgenerator;
+
+import java.io.Serializable;
+import java.sql.Connection;
+import java.sql.ResultSet;
+import java.sql.SQLException;
+import java.sql.Statement;
+
+import org.hibernate.HibernateException;
+import org.hibernate.Query;
+import org.hibernate.Session;
+import org.hibernate.SessionFactory;
+import org.hibernate.engine.spi.SessionImplementor;
+import org.hibernate.id.IdentifierGenerator;
+import org.hibernate.id.IdentityGenerator;
+
+
+public class CustomGeneratorForClassCar implements IdentifierGenerator
+{
+	String prefix="Vinayak";
+
+	@Override
+	public Serializable generate(SessionImplementor session, Object obj) throws HibernateException {
+
+
+		try (Connection conn=session.connection();Statement stmt=conn.createStatement())
+		{
+			String query="select Count(CAR_ID) as C_ID from car_table";
+			ResultSet res=stmt.executeQuery(query);
+			String generate=null;
+			while(res.next())
+			{
+				generate=prefix+res.getInt(1);
+			}
+		} catch (SQLException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		return null;
+	}
+	 
+		
+		
+}
+
+

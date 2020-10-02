@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Rename resource &apos;Servelet/WebContent/ServeletsEx1.html&apos; to &apos;AnchorTag.html&apos;" description="Rename resource &apos;ServeletsEx1.html&apos;" flags="7" id="org.eclipse.ltk.core.refactoring.rename.resource" input="WebContent/ServeletsEx1.html" name="AnchorTag.html" stamp="1581839689645" updateReferences="true"/>
+</session>

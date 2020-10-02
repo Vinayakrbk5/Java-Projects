@@ -1,0 +1,9 @@
+package com.xworkz.onetoone;
+
+public class StudentDAOImpl {
+
+	public StudentDAOImpl() {
+		// TODO Auto-generated constructor stub
+	}
+
+}

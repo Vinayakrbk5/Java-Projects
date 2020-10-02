@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Rename type &apos;CollectionFramework.ListsInsideList&apos; to &apos;ArrayListsInsideAnotherArrayList&apos;&#x0D;&#x0A;- Original project: &apos;Pracice_Programs&apos;&#x0D;&#x0A;- Original element: &apos;CollectionFramework.ListsInsideList&apos;&#x0D;&#x0A;- Renamed element: &apos;CollectionFramework.ArrayListsInsideAnotherArrayList&apos;&#x0D;&#x0A;- Update references to refactored element&#x0D;&#x0A;- Update textual occurrences in comments and strings" description="Rename type &apos;ListsInsideList&apos;" flags="589830" id="org.eclipse.jdt.ui.rename.type" input="/src&lt;CollectionFramework{ListsInsideList.java[ListsInsideList" matchStrategy="1" name="ArrayListsInsideAnotherArrayList" qualified="false" references="true" similarDeclarations="false" stamp="1580913760546" textual="false" version="1.0"/>
+</session>

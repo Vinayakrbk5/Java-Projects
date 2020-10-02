@@ -1,0 +1,60 @@
+package transactions;
+
+import java.sql.Connection;
+import java.sql.DriverManager;
+import java.sql.PreparedStatement;
+import java.sql.SQLException;
+
+import constant.DBConstant;
+import singletonclasspackage.SingleTonClassEx;
+
+public class TransactionManagement {
+	Connection conn = null;
+	PreparedStatement prestmt = null;
+
+	public void insertData(String phoneno, int amount, String custname, String emailis, String bank, int cvv) {
+		String rechargeinfoQuery = "insert into Recharge_info (phoneno,amount) values (?,?);";
+		String customer_infoQuery = "insert into Customer_info values(?,?,?,?);";
+
+		try
+		{
+//			conn = DriverManager.getConnection(DBConstant.URL, DBConstant.USER, DBConstant.PASSWORD);
+			conn=SingleTonClassEx.getInstance().getConnection();
+			conn.setAutoCommit(false);
+			PreparedStatement rechargeinfoprepstmt = conn.prepareStatement(rechargeinfoQuery);
+			rechargeinfoprepstmt.setString(1, phoneno);
+			rechargeinfoprepstmt.setInt(2, amount);
+			int res1=rechargeinfoprepstmt.executeUpdate();
+			System.out.println(res1);
+
+			PreparedStatement customerinfoprepstmt = conn.prepareStatement(customer_infoQuery);
+
+			customerinfoprepstmt.setString(1, custname);
+			customerinfoprepstmt.setString(2, emailis);
+			customerinfoprepstmt.setString(3, bank);
+			customerinfoprepstmt.setInt(4, cvv);
+			int res =customerinfoprepstmt.executeUpdate();
+			System.out.println(res);
+
+			conn.commit();
+
+		} catch (SQLException e) {
+
+			System.out.println("Rolling back due to exception");
+			try {
+				conn.setAutoCommit(true);
+			} 
+		catch (SQLException e1) {
+				// TODO Auto-generated catch block
+				e1.printStackTrace();
+			}
+		}finally {
+				try {
+					conn.setAutoCommit(true);
+				} catch (SQLException e1) {
+					// TODO Auto-generated catch block
+					e1.printStackTrace();
+				}
+			}
+		}
+	}

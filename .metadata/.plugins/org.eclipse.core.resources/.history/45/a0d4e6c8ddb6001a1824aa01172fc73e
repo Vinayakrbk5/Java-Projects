@@ -1,0 +1,16 @@
+package com.xworkz.onetoone;
+
+public class StudentTester {
+
+	public static void main(String[] args) {
+		System.out.println("Start : main method");
+		try {
+			
+		}catch (Exception e) {
+			// TODO: handle exception
+		}finally {
+			StudentUtil.closeSF();
+		}
+	}
+
+}

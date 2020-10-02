@@ -1,0 +1,54 @@
+package com.xworkz.onetoone;
+
+import javax.persistence.Column;
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.Id;
+import javax.persistence.Table;
+
+import org.hibernate.annotations.GenericGenerator;
+import org.hibernate.annotations.Parameter;
+
+@Entity
+@Table(name="STUDENT_DETAILS12")
+public class StudentDetailsDTO {
+	@Id
+	@Column(name="student_id")
+	@GeneratedValue(generator="auto")
+	@GenericGenerator(name="auto",strategy="foreign",parameters= {@Parameter(name="student11",value="property")})
+	private int stId;
+	@Column(name="STUD_PHONE")
+	private String phoneNumber;
+	
+
+	public StudentDetailsDTO() {
+		System.out.println("created "+this.getClass().getSimpleName());
+	}
+
+
+	public int getStId() {
+		return stId;
+	}
+
+
+	public void setStId(int stId) {
+		this.stId = stId;
+	}
+
+
+	public String getPhoneNumber() {
+		return phoneNumber;
+	}
+
+
+	public void setPhoneNumber(String phoneNumber) {
+		this.phoneNumber = phoneNumber;
+	}
+
+
+	@Override
+	public String toString() {
+		return "StudentDetailsDTO [stId=" + stId + ", phoneNumber=" + phoneNumber + "]";
+	}
+
+}

@@ -1,0 +1,55 @@
+package com.xworkz.marshalling;
+
+import java.io.File;
+import java.io.FileOutputStream;
+
+import javax.xml.bind.JAXBContext;
+import javax.xml.bind.JAXBException;
+import javax.xml.bind.Marshaller;
+import javax.xml.bind.Unmarshaller;
+
+public class StudentJaxbTester {
+
+	public static void main(String[] args) throws Exception {
+		conversionObjectToXml();
+//		conversionXmlToObjct();
+		
+	}
+	
+	private static void conversionObjectToXml() throws Exception
+	{
+		try {
+			JAXBContext jaxbcontext=JAXBContext.newInstance(Student.class);
+			Marshaller marshaller=jaxbcontext.createMarshaller();
+			marshaller.setProperty(Marshaller.JAXB_FORMATTED_OUTPUT, true);
+			
+			Student st=new Student(2, "Vinayak", 25);
+			marshaller.marshal(st, new FileOutputStream("india.xml"));
+			System.out.println("XML File is created successfully");
+			
+		} catch (JAXBException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		
+	}
+	
+	private static void conversionXmlToObjct()
+			{
+		try {
+			File file=new File("india.xml");
+			JAXBContext jaxbcontext=JAXBContext.newInstance(Student.class);
+			Unmarshaller unmarshaller=jaxbcontext.createUnmarshaller();
+			
+			Student student=(Student) unmarshaller.unmarshal(file);
+			System.out.println(student);
+			
+		} catch (JAXBException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		
+		
+			}
+
+}

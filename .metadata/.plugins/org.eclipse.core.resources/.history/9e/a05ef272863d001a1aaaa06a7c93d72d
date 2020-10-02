@@ -1,0 +1,13 @@
+package AssignmentOnInterfaceToAbstractClassToClass;
+
+public class Humans extends Mammals {
+	public void eat()
+	{
+		System.out.println("Humans are "+display()+" and they eat food by using hands");
+	}
+	public void move()
+	{
+		System.out.println("Animals are moving");
+	}
+
+}

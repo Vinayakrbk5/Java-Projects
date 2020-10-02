@@ -1,0 +1,23 @@
+package Method_Overloading;
+
+public class Methods {
+	int a;
+	int b;
+	public void  sum (int a,int b)
+	{
+		this.a=a;
+		this.b=b;
+	}
+	public int send()
+	{
+		return a+b;
+	}
+	
+
+	public static void main(String[] args) {
+	 Methods meth=new Methods();
+	 meth.sum(10, 20);
+	 int s=meth.send();
+	}
+
+}

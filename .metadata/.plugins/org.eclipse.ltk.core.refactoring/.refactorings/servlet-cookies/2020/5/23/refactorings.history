@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Rename resource &apos;servlet-cookies/WebContent/NewFile.jsp&apos; to &apos;welcome.jsp&apos;" description="Rename resource &apos;NewFile.jsp&apos;" flags="7" id="org.eclipse.ltk.core.refactoring.rename.resource" input="WebContent/NewFile.jsp" name="welcome.jsp" stamp="1590927017251" updateReferences="true"/>
+</session>

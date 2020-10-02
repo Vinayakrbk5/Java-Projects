@@ -1,0 +1,36 @@
+package com.xworkz.customgenerator;
+
+import java.io.Serializable;
+
+import org.hibernate.Query;
+import org.hibernate.Session;
+import org.hibernate.SessionFactory;
+import org.hibernate.engine.spi.SessionImplementor;
+import org.hibernate.id.IdentityGenerator;
+
+import com.xworkz.singleton.SFSingleton;
+
+public class CustomGeneratorForClassCar extends IdentityGenerator{
+	 SessionFactory factory=SFSingleton.createSessionFactory();
+	@Override
+	public Serializable generate(SessionImplementor s, Object obj) {
+		Session session=factory.openSession();
+		try {
+			
+			String hql="select count(car) CarDTO car";
+			Query query=session.createQuery(hql);
+			int res=(int) query.uniqueResult();
+			String genId="Vinayk"+res;
+			return genId;
+			
+		}catch (Exception e) {
+			e.printStackTrace();
+		}finally {
+			session.close();
+			SFSingleton.closeSF();
+		}
+		
+		return null;
+	}
+
+}

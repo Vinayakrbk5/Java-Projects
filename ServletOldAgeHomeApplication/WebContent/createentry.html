@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Insert title here</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+  <style>
+  
+  </style>
+  
+</head>
+<body style="background:pink">
+
+<div class="conainer">
+<form action="createentry" method="post">
+<marquee scrollamount="15%" behavior="alternate" direction="right" bgcolor="skyblue">
+<h1> Page To Create New Entry </h1>
+</marquee>
+
+<div class="form-group">
+<label for="id1"> Enter PersonId: </label>
+<input type="number"  id="id1" name="id" class="form-control" style="width:4%">
+</div>
+
+<div class="form-group">
+<label for="name"> Enter Person Name: </label>
+<input type="text"  id="name" name="name" class="form-control" style="width:15%">
+</div>
+
+<div class="form-group">
+<label for="age"> Enter Person Age: </label>
+<input type="number"  id="age" name="age" class="form-control" style="width:4%">
+</div>
+
+<div class="form-group">
+<label for="health"> Enter Person's Health Condition: </label>
+<input type="text"  id="health" name="health" class="form-control" style="width:5%">
+</div>
+
+<div class="form-group">
+<label for="phone"> Enter Person's Contact Number: </label>
+<input type="text"  id="phone" name="phone"class="form-control" style="width:10%">
+</div>
+
+<div class="form-group">
+<label for="addr"> Enter Person's Address: </label>
+<input type="text"  id="addr" name="address" class="form-control" style="width:30%">
+</div>
+
+
+<div>
+<button type="submit" class="btn btn-success"> Submit</button>
+<button type="reset" class="btn btn-danger"> Cancel </button>
+</div>
+</form>
+</div>
+
+</body>
+</html>

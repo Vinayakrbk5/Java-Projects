@@ -1,0 +1,17 @@
+INDEX VERSION 1.131
+C:\Users\AAKASH\eclipse-workspace\.metadata\.plugins\org.eclipse.jst.jsp.core\jspsearch\161416989.index
+\DominosApp\src
+C:\Users\AAKASH\eclipse-workspace\.metadata\.plugins\org.eclipse.jst.jsp.core\jspsearch\3215933186.index
+\servlet-cookies\src
+C:\Users\AAKASH\eclipse-workspace\.metadata\.plugins\org.eclipse.jst.jsp.core\jspsearch\1067811947.index
+\welcomejspproject\src
+C:\Users\AAKASH\eclipse-workspace\.metadata\.plugins\org.eclipse.jst.jsp.core\jspsearch\3506592288.index
+\Practice_JSP\src
+C:\Users\AAKASH\eclipse-workspace\.metadata\.plugins\org.eclipse.jst.jsp.core\jspsearch\1065058373.index
+\WelcomeJsp\src
+C:\Users\AAKASH\eclipse-workspace\.metadata\.plugins\org.eclipse.jst.jsp.core\jspsearch\2844277119.index
+\welcome-jsp-project\src
+C:\Users\AAKASH\eclipse-workspace\.metadata\.plugins\org.eclipse.jst.jsp.core\jspsearch\486382570.index
+\Dominos-App-Design\src
+C:\Users\AAKASH\eclipse-workspace\.metadata\.plugins\org.eclipse.jst.jsp.core\jspsearch\2524344678.index
+\imagedisplaybyservlet\src

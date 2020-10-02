@@ -1,0 +1,24 @@
+package com.xworkz.filehandling;
+
+import java.io.File;
+
+public class FileHandlingEx1 {
+
+public static void main(String[] args) {
+	File file=new File("C:\\VinayakWorkspace\\xworkz");
+//	File file1=new File("C:\\VinayakWorkspace\\xworkz1"); 
+	
+	file.mkdir();
+//	file.mkdirs();
+//	if(file.isDirectory())
+//	{
+//	System.out.println("don't create file");
+//	}
+//	else
+//	{
+		System.out.println("created new directory");
+//	}
+//		System.out.println("setWritable"+file.setWritable(false));
+		System.out.println("canWrite"+file.canWrite());
+}
+}

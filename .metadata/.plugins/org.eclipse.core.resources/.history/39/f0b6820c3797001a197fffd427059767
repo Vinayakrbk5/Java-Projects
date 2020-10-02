@@ -1,0 +1,98 @@
+package callablestatement;
+
+import java.sql.CallableStatement;
+import java.sql.Connection;
+import java.sql.ResultSet;
+import java.sql.SQLException;
+import java.sql.Types;
+import java.util.ArrayList;
+import singletonpackages.SingleTonClass;
+
+public class CallableStatementEx {
+	public static void main(String[] args) {
+		ArrayList<Customer> arrlist = new ArrayList<>();
+		arrlist.add(new Customer(1, "Vinayak", 878768387));
+		arrlist.add(new Customer(2, "Vivek", 988987348));
+		arrlist.add(new Customer(3, "Sharath", 946542365));
+
+//		System.out.println(arrlist);
+
+		String dropproc = "drop procedure if exists proc;";
+		String truntable = "truncate table customer;";
+		String createproc = "create procedure proc(in custid int,in fname varchar(50),in phone int) begin "
+				+ "insert into Customer(Customerid,firstname,phonenumber) values(custid,fname,phone); select * from customer; end;";
+		String insertquery = "call proc(?,?,?);";
+		String outproc = "call outproc2(?,?);";
+		String inoutproc = "call inoutprocedure(?,?);";
+		String selectquery = "select * from Customer;";
+
+		Connection conn = SingleTonClass.getInstance().getConnection();
+		try (CallableStatement calstmt1 = conn.prepareCall(dropproc);
+				CallableStatement calstmt2 = conn.prepareCall(truntable);
+				CallableStatement calstmt3 = conn.prepareCall(createproc);
+				CallableStatement calstmt4 = conn.prepareCall(insertquery);
+				CallableStatement calstmt5 = conn.prepareCall(outproc);
+				CallableStatement calstmt6 = conn.prepareCall(inoutproc);
+				CallableStatement calstmt7 = conn.prepareCall(selectquery)) {
+			// code to drop procedure
+			calstmt1.execute();
+			System.out.println("Procedure is dropped Successfully");
+			System.out.println();
+
+			// code to truncate table
+			calstmt2.execute();
+			System.out.println("Table records are truncated Successfully");
+			System.out.println();
+
+			// code to create procedure
+			calstmt3.execute();
+			System.out.println("Procedure is created Successfully");
+			System.out.println();
+
+			// code to insert records into table through procedure
+			for (Customer cust : arrlist) {
+				calstmt4.setInt(1, cust.getCustid());
+				calstmt4.setString(2, cust.getName());
+				calstmt4.setInt(3, cust.getPhone());
+				calstmt4.execute();
+			}
+			System.out.println("records are inserted Successfully by calling Procedure ");
+			System.out.println();
+
+			// code to send out parameter through procedure
+			calstmt5.setInt(1, 2);
+			calstmt5.registerOutParameter(2, Types.VARCHAR);
+			calstmt5.execute();
+			System.out.println("Procedure is executed Successfully by sending out parameneters");
+			System.out.println(" Out parameter values is :" + calstmt5.getString(2));
+			System.out.println();
+
+			// code to send inout parameter through procedure
+			calstmt6.setInt(1, 5);
+			calstmt6.registerOutParameter(2, Types.INTEGER);
+			calstmt6.execute();
+			System.out.println("Procedure is executed Successfully by sending inout parameneters");
+			System.out.println("inout parameter values is :" + calstmt6.getInt(2));
+			System.out.println();
+
+			// code to display customer table records
+			try (ResultSet res = calstmt7.executeQuery(selectquery)) {
+				System.out.println("Displaying customer table :");
+				System.out.println("Customer Id" + "\t" + "Customer Name" + "\t" + "Phone Number");
+				while (res.next()) {
+					System.out.print(res.getInt(1));
+					System.out.print("\t\t" + res.getString(2) + "\t\t");
+					System.out.println(res.getInt(3));
+				}
+
+			} catch (SQLException e) {
+				// TODO Auto-generated catch block
+				e.printStackTrace();
+			}
+		} catch (SQLException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+	}
+
+}

@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Rename resource &apos;ComparableEx&apos; to &apos;ComparableAndIteratorEx&apos;" description="Rename resource &apos;ComparableEx&apos;" flags="7" id="org.eclipse.ltk.core.refactoring.rename.resource" input="/ComparableEx" name="ComparableAndIteratorEx" stamp="1585633273587" updateReferences="true"/>
+</session>

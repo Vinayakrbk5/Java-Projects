@@ -1,0 +1,114 @@
+package Com.Xworkz.oldagehomeapp;
+
+import java.io.IOException;
+import java.io.PrintWriter;
+import java.sql.Connection;
+import java.sql.DriverManager;
+import java.sql.PreparedStatement;
+import java.sql.SQLException;
+
+import javax.servlet.ServletContext;
+import javax.servlet.ServletException;
+import javax.servlet.http.HttpServlet;
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
+
+public class UpdateDBEntry extends HttpServlet{
+
+	private static final long serialVersionUID = 1L;
+	@Override
+	protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
+
+	PrintWriter pw=resp.getWriter();
+	StringBuilder sb=new StringBuilder();
+	
+	String personid=req.getParameter("number");
+	String selected=req.getParameter("select");
+	String newvalue=req.getParameter("newfieldvalue");
+	String updatequery="Update OldAgeHome set ?=? where id=?;";
+	
+	ServletContext context=getServletContext();
+	String url=context.getInitParameter("dburl");
+	String user=context.getInitParameter("dbuser");
+	String password=context.getInitParameter("dbpassword");
+	String driver=context.getInitParameter("dbdriver");
+	
+	try {
+		Class.forName(driver);
+	} catch (ClassNotFoundException e) {
+		// TODO Auto-generated catch block
+		e.printStackTrace();
+	}
+	try(Connection conn=DriverManager.getConnection(url, user, password);
+			PreparedStatement prestmt=conn.prepareStatement(updatequery);)
+	{
+		
+	
+	
+	
+	
+	
+	if(personid!="" && selected!="" && newvalue!="")
+	{
+		int pid=Integer.parseInt(personid);
+		if(selected.equals("PersonName"))// "Update OldAgeHome set ?=? where id=?;"
+		{
+		prestmt.setString(1, selected);	
+		prestmt.setString(2, newvalue);
+		prestmt.setInt(3, pid);
+		prestmt.executeUpdate();
+		sb.append("<div><big><b>PersonName</b> field in the DataBase is Updated.</big></div>");
+		}
+		else if(selected.equals("Age"))
+		{
+			int newage=Integer.parseInt(newvalue);
+			prestmt.setString(1, selected);
+			prestmt.setInt(2, newage);
+			prestmt.setInt(3, pid);
+			prestmt.executeUpdate();
+			sb.append("<div><big><b>Age</b> field in the DataBase is Updated.</big></div>");
+			
+		}
+		else if(selected.equals("MedCondition"))
+		{
+			prestmt.setString(1, selected);
+			prestmt.setString(2, newvalue);
+			prestmt.setInt(3, pid);
+			prestmt.executeUpdate();
+			sb.append("<div><big><b>MedCondition</b> field in the DataBase is Updated.</big></div>");
+		}
+		else if(selected.equals("phone"))
+		{
+			prestmt.setString(1, selected);
+			prestmt.setString(2, newvalue);
+			prestmt.setInt(3, pid);
+			prestmt.executeUpdate();
+			sb.append("<div><big><b>Phone</b> field in the DataBase is Updated.</big></div>");
+		}
+		else if(selected.equals("address"))
+		{
+			prestmt.setString(1, selected);
+			prestmt.setString(2, newvalue);
+			prestmt.setInt(3, pid);
+			prestmt.executeUpdate();
+			sb.append("<div><big><b>Address</b> field in the DataBase is Updated.</big></div>");
+		}
+			
+		
+	}
+	
+	else
+	{
+		sb.append("<div><h1> You have missed Some Entry.</div>>div>So Please enter missed one"
+				+ ".<a href='updateentry.html'>Goto update page</a></div>");
+	}
+	} catch (SQLException e) {
+		// TODO Auto-generated catch block
+		e.printStackTrace();
+	}
+	}
+
+
+
+
+}

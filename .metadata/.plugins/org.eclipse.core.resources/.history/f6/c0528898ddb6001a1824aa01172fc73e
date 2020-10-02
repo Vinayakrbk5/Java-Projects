@@ -1,0 +1,27 @@
+package com.xworkz.onetoone;
+
+
+
+import org.hibernate.Session;
+import org.hibernate.SessionFactory;
+import org.hibernate.Transaction;
+
+public class StudentDAOImpl implements StudentDAO{
+SessionFactory factory=StudentUtil.returnSF();
+
+	@Override
+	public void save(StudentDetailsDTO dto) {
+		Session session=factory.openSession();
+		try {
+			Transaction trans=session.beginTransaction();
+			
+			
+			
+		}catch (Exception e) {
+			e.printStackTrace();
+		}finally {
+			session.close();
+		}
+	}
+
+}

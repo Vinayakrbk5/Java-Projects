@@ -1,0 +1,36 @@
+package IteratorExapmles;
+
+public class Mobile {
+	private String type;
+	private Integer price;
+	private String brand;
+	public Mobile(String type,Integer price,String brand)
+	{
+	this.type=type;
+	this.brand=brand;
+	this.price=price;
+	}
+	public String getType() {
+		return type;
+	}
+	public void setType(String type) {
+		this.type = type;
+	}
+	public Integer getPrice() {
+		return price;
+	}
+	public void setPrice(Integer price) {
+		this.price = price;
+	}
+	public String getBrand() {
+		return brand;
+	}
+	public void setBrand(String brand) {
+		this.brand = brand;
+	}
+	public String toString()
+	{
+		return "[Price= "+price+" "+"Brand= "+brand+" "+"Type= "+type+"]";
+	}
+	
+}

@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Insert title here</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+  
+  <style>
+  #for{
+  width:10%;
+  }
+  </style>
+</head>
+<body>
+
+<form action="calculator.submit" method="get">
+<div class="jumbotron">
+<header style="text-align:center;font-size:50px"> Mathematical Operation</header>
+<div class="form-group">
+<label> Enter 1st Number:</label>
+<input type="number" name="num1" id="for" class="form-control">
+</div>
+<br>
+<div class="form-group">
+<label> Enter 2nd Number:</label>
+<input type="number" name="num2" id="for" class="form-control">
+</div>
+<br>
+<div>
+<label>Select Operation:</label>
+<div>
+<input type="radio" name="op" value="addition" ><b><i>&nbsp;Addition&nbsp;</i></b>
+</div>
+<div>
+<input type="radio" name="op" value="substraction" ><b ><i>&nbsp;Substraction&nbsp;</i></b>
+</div>
+<div>
+<input type="radio" name="op" value="multiflication" ><b><i>&nbsp;Multiplication&nbsp;</i></b>
+</div>
+<div>
+<input type="radio" name="op" value="division" ><b><i>&nbsp;Devision&nbsp;</i></b>
+</div>
+</div>
+
+<button type="submit"> Submit</button>
+<button type="reset"> Cancel </button>
+</div>
+</form>
+</body>
+</html>

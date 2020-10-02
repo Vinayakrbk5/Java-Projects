@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Insert title here</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+  <style>
+  
+  </style>
+  
+</head>
+<body style="background:pink">
+
+<div class="conainer" >
+<form action="updateentry" method="post">
+<marquee scrollamount="15%" behavior="alternate" direction="right" bgcolor="rgba(100,100,100,.4" style="color:white">
+<h1> To Update DataBase Enter following Details </h1>
+</marquee>
+
+<div style="Margin:250px,150px;border:2px solid black;width:100%;float:left">
+<div class= "form-group">
+<label for="num"> Enter Perons's Id </label>
+<input type= "number" id="num" name="number" class="form-control"style="width:5%">
+</div>
+
+<div class="form-group"> 
+<label> Select one of the field to update </label>
+<select name="select" class="form-control" style="width:20%">
+<option value="">none selected </option>
+<option value="PersonName">Person Name</option>
+<option value="Age"> Person's Age </option>
+<option value="MedCondition"> Medical Condition </option>
+<option value="phone"> Contact Number </option>
+<option value="address"> Address </option>
+</select>
+</div>
+
+<div class="form-group">
+<label for="new"> Enter new field value :</label>
+<input type="text" name="newfieldvalue" id="new" class="form-control" style="width:20%">
+</div>
+
+
+<div>
+<button type="submit" class="btn btn-info"> Submit</button>
+<button type="reset" class="btn btn-danger"> Cancel </button>
+</div>
+</div>
+</form>
+</div>
+
+</body>
+</html>

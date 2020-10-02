@@ -1,0 +1,38 @@
+package com.xworkz.onetoone;
+
+public class StudentDetailsDTO {
+	private int stId;
+	private String phoneNumber;
+	
+
+	public StudentDetailsDTO() {
+		System.out.println("created "+this.getClass().getSimpleName());
+	}
+
+
+	public int getStId() {
+		return stId;
+	}
+
+
+	public void setStId(int stId) {
+		this.stId = stId;
+	}
+
+
+	public String getPhoneNumber() {
+		return phoneNumber;
+	}
+
+
+	public void setPhoneNumber(String phoneNumber) {
+		this.phoneNumber = phoneNumber;
+	}
+
+
+	@Override
+	public String toString() {
+		return "StudentDetailsDTO [stId=" + stId + ", phoneNumber=" + phoneNumber + "]";
+	}
+
+}

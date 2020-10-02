@@ -1,0 +1,14 @@
+package com.xworkz.onetoone;
+
+
+import org.hibernate.SessionFactory;
+
+public class StudentDAOImpl implements StudentDAO{
+SessionFactory factory=StudentUtil.returnSF();
+
+	@Override
+	public void save(StudentDetailsDTO dto) {
+		
+	}
+
+}

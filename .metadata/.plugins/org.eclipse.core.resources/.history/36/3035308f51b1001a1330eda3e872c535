@@ -1,0 +1,28 @@
+package com.xworkz.customgenerator;
+
+import java.io.Serializable;
+
+import org.hibernate.HibernateException;
+import org.hibernate.Query;
+import org.hibernate.Session;
+import org.hibernate.SessionFactory;
+import org.hibernate.engine.spi.SessionImplementor;
+import org.hibernate.id.IdentifierGenerator;
+import org.hibernate.id.IdentityGenerator;
+
+
+public class CustomGeneratorForClassCar implements IdentifierGenerator
+{
+	String prefix="Vinayak";
+
+	@Override
+	public Serializable generate(SessionImplementor arg0, Object arg1) throws HibernateException {
+		// TODO Auto-generated method stub
+		return null;
+	}
+	 
+		
+		
+}
+
+

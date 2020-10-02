@@ -1,0 +1,13 @@
+package AssignmentOnInterfaceToAbstractClassToClass;
+
+public class Mammals implements Animals{
+	public void nise()
+	{
+		System.out.println("Animals are making noise");
+	}
+	public String display()
+	{
+		return "Animals";
+	}
+
+}

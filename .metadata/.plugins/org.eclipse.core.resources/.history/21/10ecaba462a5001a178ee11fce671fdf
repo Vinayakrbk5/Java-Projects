@@ -1,0 +1,50 @@
+package com.xworkz.marshalling;
+
+import javax.xml.bind.annotation.XmlAttribute;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlRootElement;
+
+@XmlRootElement
+public class Student {
+
+	private int stId;
+	private String stName;
+	private int stAge;
+	
+	public Student() {}
+	
+	public Student(int stId, String stName, int stAge) {
+		super();
+		this.stId = stId;
+		this.stName = stName;
+		this.stAge = stAge;
+	}
+	
+	
+	@XmlAttribute
+	public int getStId() {
+		return stId;
+	}
+	public void setStId(int stId) {
+		this.stId = stId;
+	}
+	
+	@XmlElement
+	public String getStName() {
+		return stName;
+	}
+	public void setStName(String stName) {
+		this.stName = stName;
+	}
+	@XmlElement
+	public int getStAge() {
+		return stAge;
+	}
+	public void setStAge(int stAge) {
+		this.stAge = stAge;
+	}
+//	@Override
+//	public String toString() {
+//		return "Student [stId=" + stId + ", stName=" + stName + ", stAge=" + stAge + "]";
+//	}
+}

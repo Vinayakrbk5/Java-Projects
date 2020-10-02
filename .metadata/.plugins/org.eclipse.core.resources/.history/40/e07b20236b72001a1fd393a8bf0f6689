@@ -1,0 +1,45 @@
+package IteratorExapmles;
+
+import java.util.ArrayList;
+import java.util.ConcurrentModificationException;
+import java.util.Iterator;
+import java.util.ListIterator;
+
+public class MobileEx {
+	public static void main(String[] args) {
+		ArrayList<Mobile> mobList = new ArrayList<>();
+
+		mobList.add(new Mobile("Smart Phone", 10000.00, "Samsung"));
+		mobList.add(new Mobile("Keypad Phone", 2000.00, "Nokia"));
+		mobList.add(new Mobile("Java Phone", 6000.00, "Java"));
+
+		System.out.println("Before: " + mobList);
+//		try
+//		{
+//		for (Mobile mobs : mobList) 
+//		{
+//			if (mobs.getBrand().equals("Samsung")) {
+//				mobList.remove(mobs); // remove(int index) // remove(Object) } }
+//			}
+//		}
+//		}
+//		catch(ConcurrentModificationException e)
+//		{
+//			System.out.println("This is ConcurrentModificationException ");
+//		}
+//		System.out.println("After: " + mobList);
+		
+		Iterator<Mobile> itr = mobList.iterator();
+		//Boolean hasnext() --> ,Mobile next(), remove();
+		//
+		while(itr.hasNext()) {
+			Mobile m = (Mobile) itr.next();
+			if(m.getBrand().equals("Nokia")){
+				itr.remove();
+			}
+		}
+		
+		System.out.println("After:"+mobList);
+
+}
+}

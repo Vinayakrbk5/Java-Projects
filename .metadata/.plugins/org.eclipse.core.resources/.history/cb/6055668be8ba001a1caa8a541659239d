@@ -1,0 +1,9 @@
+package com.xworkz.filehandling;
+
+public class fileCreation {
+
+	public fileCreation() {
+		// TODO Auto-generated constructor stub
+	}
+
+}

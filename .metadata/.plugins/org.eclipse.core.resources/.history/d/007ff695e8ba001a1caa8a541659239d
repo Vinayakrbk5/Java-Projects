@@ -1,0 +1,11 @@
+package com.xworkz.filehandling;
+
+import java.io.File;
+
+public class fileCreation {
+
+public static void main(String[] args) {
+	File file=new File("C:\\VinayakWorkspace\\xworkz\\textfile.txt");
+	file.createNewFile();
+}
+}

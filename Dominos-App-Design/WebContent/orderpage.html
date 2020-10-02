@@ -1,0 +1,324 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Dominos App</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+  <style>
+  
+  main{
+width:100%;
+margin:0px;
+border:2px solid black;
+color:black;
+display:grid;
+grid-template-rows:repeat(1,400px);	
+grid-template-columns:  repeat(3,1fr);
+grid-gap:20px;
+grid-auto-rows:150px;
+
+
+
+}
+.div1{ background:lightgreen;
+grid-column:1/2;
+padding:10px;
+}
+.div2{background:lightgreen;
+grid-column:2/3;
+padding:10px;
+}
+.div3{background:lightgreen;
+grid-column:3/-1;
+padding:10px;
+}
+
+.div4{background:lightgreen;
+grid-column:1/2;
+grid-row:2/3;
+padding:10px;}
+
+.div5{background:lightgreen;
+grid-row:2/3;
+grid-column:2/3;
+padding:10px;
+}
+.div6{background:lightgreen;
+grid-column:3/-1;
+grid-row:2/3;
+padding:10px;
+}
+.div7{background:lightgreen;
+grid-column:1/2;
+grid-row:3/4;
+padding:10px;
+}
+.div8{background:lightgreen;
+grid-column:2/3;
+grid-row:3/4;
+padding:10px;
+}
+.div9{background:lightgreen;
+grid-column:3/-1;
+grid-row:3/4;
+padding:10px;
+}
+  
+  </style>
+</head>
+<body style="background:white;margin:20px;background:rgba(20,20,20,.4)">
+
+
+<div class="container">
+<nav class="navbar navbar-inverse">
+<table>
+<tbody>
+<tr>
+<td>
+<img src="images/Dominos_logo.png" 
+  style="color:white" height="40px" width="40px" hspace="50%">
+ </td>
+ <td>
+<div class="navbar-header"><a class="navbar-brand" href="#">&nbsp;&nbsp;&nbsp;Dominos Pizza </a></div>
+<ul class="nav navbar-nav">
+<li><a href="#veg">Veg Pizza |</a></li>
+<li><a href="#nonveg"> Non-Veg Pizza |</a></li>
+<li><a href="#sideorder"> Side Orders |</a></li>
+<li><a href="#beva">Beverages |</a></li>
+<li><a href="#pizzamaniaveg">Pizza Mania Veg |</a></li>
+<li><a href="#nonvegmania">Pizza Mania Non-Veg  |</a></li>
+</ul>
+</td>
+
+</tr>
+</tbody>
+</table>
+</nav>
+</div>
+<form action="domonosdataentry" method="post">
+<div style="font-size:50px;color:tomato;text-align:center;background:yellow;width:40%;text-family:courier"> Domino's Pizza Menu </div>
+
+<h1 id="veg"> Veg Pizzas</h1>
+<main>
+<div class="div1"><img src="images/MaxicanGreen.png" 
+  style="color:white;" height="270" width="400" ><div style="padding:10x"><b>MaxicanGreen</b><div> Mexican herbs sprinkled on onion, </div>
+  <div> capsicum, tomato & jalapeno</div></div>
+  <div><b>size</b></div>
+  <select name="size1" >
+  <option value="Regular 200">Regular 200</option>
+  <option value="Medium 400">Medium 400</option>
+  <option value="Lage 600">Large 600</option>
+  </select>
+  <input type="checkbox" name="maxgreen" value="maxgreen">Select  <input type="number" name="max1" style="width:10%" value=1>Qty </div>
+<div class="div2"><img src="images/peppypaneer.png" 
+  style="color:white;" height="270" width="400" ><div style="padding:10x"><b>Peppy Paneer</b><div>Flavorful trio of juicy paneer, </div>
+  <div> crisp capsicum with spicy red paprika</div></div>
+  <div><b>size</b></div>
+  <select name="size2" >
+  <option value="Regular 200">Regula 200r</option>
+  <option value="Medium 400">Medium 400</option>
+  <option value="Lage 600">Large 600</option>
+  </select>
+  <input type="checkbox" name="pepaneer" value="Peppy Paneer">Select <input type="number" name="max2" style="width:10%" value=1>Qty </div>
+  </div>
+<div class="div3"><img src="images/inditandoori.png" 
+  style="color:white;" height="270" width="400" ><div style="padding:10x"><b>Indi Tandhoori</b><div>It is hot. It is spicy. It is oh-so-Indian. </div>
+  <div> Tandoori paneer with capsicum, red paprika & mint mayo</div></div>
+  <div><b>size</b></div>
+  <select name="size3" >
+  <option value="Regular 200">Regular 200</option>
+  <option value="Medium 400">Medium 400</option>
+  <option value="Lage 600">Large 600</option>
+  </select>
+  <input type="checkbox" name="indipaneer" value="Indi Tandhoori Paneer">Select <input type="number" name="max3" style="width:10%" value=1>Qty </div>
+  </div> 
+</main>
+
+<h1 id="nonveg"> Non-Veg Pizzas</h1>
+<main>
+<div class="div1"><img src="images/chickenfiesta.png" 
+  style="color:white;" height="270" width="400" ><div style="padding:10x"><b>Chicken Fiesta</b><div>Grilled chicken rashers, peri-peri chicken, </div>
+  <div> onion & capsicum, a complete fiesta</div></div>
+  <div><b>size</b></div>
+  <select name="size4" >
+  <option value="Regular 200">Regular 200</option>
+  <option value="Medium 400">Medium 400</option>
+  <option value="Lage 600">Large 600</option>
+  </select>
+  <input type="checkbox" name="fiesta" value="Chicken Fiesta">Select <input type="number" name="max4" style="width:10%" value=1>Qty </div>
+  </div>
+<div class="div2"><img src="images/nonvegsupreme.png" 
+  style="color:white;" height="270" width="400" ><div style="padding:10x"><b>Non-Veg Supreme</b><div>Supreme combination of black olives, onion, capsicum,  </div>
+  <div> grilled mushroom, pepper barbecue chicken, peri-peri</div></div>
+  <div><b>size</b></div>
+  <select name="size5" >
+  <option value="Regular 200">Regular 200</option>
+  <option value="Medium 400">Medium 400</option>
+  <option value="Lage 600">Large 600</option>
+  </select>
+  <input type="checkbox" name="supreme" value="Non-Veg Supreme">Select <input type="number" name="max5" style="width:10%" value=1>Qty </div>
+  </div>
+<div class="div3"><img src="images/dominator.png" 
+  style="color:white;" height="270" width="400" ><div style="padding:10x"><b>Checken Dominator</b><div>Loaded with double pepper barbecue chicken, peri-peri chicken, </div>
+  <div> chicken tikka & grilled chicken rashers</div></div>
+  <div><b>size</b></div>
+  <select name="size6" >
+  <option value="Regular 200">Regular 200</option>
+  <option value="Medium 400">Medium 400</option>
+  <option value="Lage 600">Large 600</option>
+  </select>
+  <input type="checkbox" name="dominator" value="Non-Veg Dominator">Select <input type="number" name="max6" style="width:10%" value=1>Qty </div>
+  </div> 
+</main>
+
+<h1 id="pizzamaniaveg"> Pizza Mania Veg-Pizzas</h1>
+<main>
+<div class="div1"><img src="images/capsicum.png" 
+  style="color:white;" height="270" width="400" ><div style="padding:10x"><b>Capsicum</b><div>Fresh & crisp capsicum </div>
+  <div> for the perfect crunch in pizza</div></div>
+  <div><b>size</b></div>
+  <select name="size7" >
+  <option value="Regular 75">Regular 75</option>
+  <option value="Medium 139">Medium 139</option>
+  <option value="Lage 230">Large 230</option>
+  </select>
+  <input type="checkbox" name="capsicum" value="Capsicum">Select <input type="number" name="max7" style="width:10%" value=1>Qty </div>
+  </div>
+<div class="div2"><img src="images/goldencorn.png" 
+  style="color:white;" height="270" width="400" ><div style="padding:10x"><b>Golden Corn</b><div>Sweet & juicy golden corn </div>
+  <div> for that lipsmacking taste</div></div>
+  <div><b>size</b></div>
+  <select name="size8" >
+  <option value="Regular 79">Regular 79</option>
+  <option value="Medium 150">Medium 150</option>
+  <option value="Lage 250">Large 250</option>
+  </select>
+  <input type="checkbox" name="corn" value="Golden Corn">Select <input type="number" name="max8" style="width:10%" value=1>Qty </div>
+  </div>
+<div class="div3"><img src="images/vegloaded.png" 
+  style="color:white;" height="270" width="400" ><div style="padding:10x"><b>Veg Loaded</b><div>Tomato, jalapeno & grilled mushroom </div>
+  <div> served in a fresh pan crust</div></div>
+  <div><b>size</b></div>
+  <select name="size9" >
+  <option value="Regular 190">Regular 190</option>
+  <option value="Medium 360">Medium 360</option>
+  <option value="Lage 480">Large 480</option>
+  </select>
+  <input type="checkbox" name="vegloaded" value="Veg Loaded">Select <input type="number" name="max9" style="width:10%" value=1>Qty </div>
+  </div> 
+</main>
+
+<h1 id="nonvegmania"> Pizza Mania Non Veg-Pizzas</h1>
+<main>
+<div class="div1"><img src="images/barbecue.png" 
+  style="color:white;" height="270" width="400" ><div style="padding:10x"><b>Barbecue</b><div>Pepper barbecue chicken for </div>
+  <div> that extra zing</div></div>
+  <div><b>size</b></div>
+  <select name="size10" >
+  <option value="Regular 105">Regular 105</option>
+  <option value="Medium 195">Medium 195</option>
+  <option value="Lage 350">Large 350</option>
+  </select>
+  <input type="checkbox" name="barbecue" value="Chicken Barbecue">Select <input type="number" name="max10" style="width:10%" value=1>Qty </div>
+  </div>
+<div class="div2"><img src="images/sausage.png" 
+  style="color:white;" height="270" width="400" ><div style="padding:10x"><b>Chicken Sausage</b><div>American classic! Spicy, </div>
+  <div> herbed chicken sausage on pizza</div></div>
+  <div><b>size</b></div>
+  <select name="size11" >
+  <option value="Regular 105">Regular 105</option>
+  <option value="Medium 250">Medium 250</option>
+  <option value="Lage 420">Large 420</option>
+  </select>
+  <input type="checkbox" name="sausage" value="Chicken Sausage">Select <input type="number" name="max11" style="width:10%" value=1>Qty </div>
+  </div>
+<div class="div3"><img src="images/nonvegloaded.png" 
+  style="color:white;" height="270" width="400" ><div style="padding:10x"><b>Non-Veg Loaded</b><div>Chicken sausage, pepper barbecue chicken </div>
+  <div> & peri-peri chicken in a fresh pan crust</div></div>
+  <div><b>size</b></div>
+  <select name="size12" >
+  <option value="Regular 200">Regular 200</option>
+  <option value="Medium 400">Medium 400</option>
+  <option value="Lage 600">Large 600</option>
+  </select>
+  <input type="checkbox" name="NvegLoaded" value="Non-Veg Loaded">Select <input type="number" name="max12" style="width:10%" value=1>Qty </div>
+  </div> 
+</main>
+
+<h1 id="beva"> Bevarages</h1>
+<main>
+<div class="div1"><img src="images/lipton.png" 
+  style="color:white;" height="270" width="400" ><div style="padding:10x"><b>Lipton Tea</b><div>taste like lemon tea, </div>
+  <div> have and enjoy</div></div>
+  <div><b>size</b></div>
+  <select name="size13" >
+  <option value="One 50">One 50</option>
+  </select>
+  
+  <input type="checkbox" name="ltea" value="Lipton Ice Tea">Select <input type="number" name="max13" style="width:10%" value=1>Qty </div>
+  </div>
+<div class="div2"><img src="images/pepsi.png" 
+  style="color:white;" height="270" width="400" ><div style="padding:10x"><b>Pepsi</b><div>have cold one to get rid of hot,</div>
+  <div> have and enjoy</div></div>
+  <div><b>size</b></div>
+  <select name="size14" >
+  <option value="One 60">One 60</option>
+  
+  </select>
+  <input type="checkbox" name="pepsi" value="Pepsi">Select <input type="number" name="max14" style="width:10%" value=1>Qty </div>
+  </div>
+<div class="div3"><img src="images/clc.png" 
+  style="color:white;" height="270" width="400" ><div style="padding:10x"><b>Choco Lava Cake</b><div>Chocolate lovers delight! Indulgent, </div>
+  <div> gooey molten lava inside chocolate cake</div></div>
+  <div><b>size</b></div>
+  <select name="size15" >
+  <option value="One 99">One 99</option>
+  
+  </select>
+  <input type="checkbox" name="clc" value="Choco Lava Cake">Select <input type="number" name="max15" style="width:10%" value=1>Qty </div>
+  </div> 
+</main>
+
+<h1 id="sideorder"> Side Orders</h1>
+<main>
+<div class="div1"><img src="images/garlicbread.png" 
+  style="color:white;" height="270" width="400" ><div style="padding:10x"><b>Garlic Bread Sticks</b><div>Baked to perfection. Your perfect pizza partner! </div>
+  <div> Tastes best with dip</div></div>
+  <div><b>size</b></div>
+  <select name="size16" >
+  <option value="One 99">One 99</option>
+  
+  </select>
+  <input type="checkbox" name="garbread" value="Garlic Bread">Select <input type="number" name="max16" style="width:10%" value=1>Qty 
+  </div>
+<div class="div2"><img src="images/taco.png" 
+  style="color:white;" height="270" width="400" ><div style="padding:10x"><b>Veg-Taco Maxican</b><div>Truly irresistible! Crispy taco with </div>
+  <div> a delicious veg patty & creamy sauce</div></div>
+  <div><b>size</b></div>
+  <select name="size17" >
+  <option value="One 118">One 118</option>
+  </select>
+  
+  <input type="checkbox" name="taco" value="Veg Taco-Maxican">Select <input type="number" name="max17" style="width:10%" value=1>Qty 
+</div>
+<div class="div3"><img src="images/wings.png" 
+  style="color:white;" height="270" width="400" ><div style="padding:10x"><b>Chicken Wings</b><div>Wings Delight! Baked to Golden Perfection /div>
+  <div> with Peri Peri Sauce<</div></div>
+  <div><b>size</b></div>
+  <select name="size18" >
+  <option value="One 135">One 135</option>
+ 
+  </select>
+  <input type="checkbox" name="wings" value="Chicken Wings">Select <input type="number" name="max18" style="width:10%" value=1>Qty </div>
+  </div> 
+</main>
+<div>
+<button type="submit" class="btn btn-success" style="margin:10px;color:black;text-align:center"><b>place order</b></button>
+</div>
+
+</form>
+</body>
+</html>

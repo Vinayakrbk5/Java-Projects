@@ -1,0 +1,72 @@
+package com.xworkz.criteria;
+
+import java.util.List;
+
+import org.hibernate.Criteria;
+import org.hibernate.Session;
+import org.hibernate.SessionFactory;
+import org.hibernate.criterion.Order;
+import org.hibernate.criterion.Projection;
+import org.hibernate.criterion.Projections;
+import org.hibernate.criterion.Restrictions;
+
+import com.xworkz.SFSingleton;
+
+public class StudentDAOImpl implements StudentDAO{
+SessionFactory factory=SFSingleton.getSessionFactory();
+
+	@Override
+	public List<StudentDTO> fetchById() {
+		Session session =factory.openSession();
+		try {
+			Criteria cr=session.createCriteria(StudentDTO.class);
+//			cr.add(Restrictions.eq("age",22));
+//			cr.add(Restrictions.between("age", 23, 26));
+			cr.addOrder(Order.asc("name"));
+			cr.add(Restrictions.like("name", "vInAyAk"));
+			List<StudentDTO> list=cr.list();
+				return list;
+		}catch (Exception e) {
+			e.printStackTrace();
+		}finally {
+			session.close();
+		}
+		return null;
+		
+	}
+	@Override
+		public Double rowCount() {
+			Session session=factory.openSession();
+			try {
+				
+				Criteria cr=session.createCriteria(StudentDTO.class);
+				cr.setProjection(Projections.avg("age"));
+				List count=cr.list();
+				return (Double) count.get(0);
+				
+				
+			}catch (Exception e) {
+				e.printStackTrace();
+			}finally {
+				session.close();
+			}
+			return null;
+		}
+	
+	@Override
+		public void checkNull() {
+			Session session =factory.openSession();
+			try {
+				Criteria cr=session.createCriteria(StudentDTO.class);
+				List<StudentDTO> list=cr.list();
+				list.forEach(p->System.out.println(p));
+				
+			}catch (Exception e) {
+				e.printStackTrace();
+			}finally {
+				session.close();
+			}
+			
+		}
+
+}

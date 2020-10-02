@@ -1,0 +1,15 @@
+package com.xworkz.onetoone;
+
+import java.io.Serializable;
+
+public class StudentDTO implements Serializable{
+	
+	private int stId;
+	private String name;
+	
+
+	public StudentDTO() {
+		System.out.println("created "+this.getClass().getSimpleName());
+	}
+
+}

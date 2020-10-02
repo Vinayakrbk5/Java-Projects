@@ -1,0 +1,3 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">&#x0A;<refactoring comment="Delete resource &apos;Framework-Criteria/src/com/xworkz/criteria&apos;" deleteContents="false" description="Delete resource &apos;Framework-Criteria/src/com/xworkz/criteria&apos;" element1="/Framework-Criteria/src/com/xworkz/criteria" flags="7" id="org.eclipse.ltk.core.refactoring.delete.resources" resources="1" stamp="1592931381622"/>&#x0A;<refactoring comment="Delete resource &apos;Framework-Criteria/src/criteria&apos;" deleteContents="false" description="Delete resource &apos;Framework-Criteria/src/criteria&apos;" element1="/Framework-Criteria/src/criteria" flags="7" id="org.eclipse.ltk.core.refactoring.delete.resources" resources="1" stamp="1592931550117"/>
+</session>

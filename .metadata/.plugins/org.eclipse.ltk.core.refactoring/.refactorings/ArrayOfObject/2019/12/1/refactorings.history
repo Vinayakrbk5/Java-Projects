@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Rename compilation unit &apos;ObjArray.Bus.java&apos; to &apos;BusArray.java&apos;&#x0D;&#x0A;- Original project: &apos;ArrayOfObject&apos;&#x0D;&#x0A;- Original element: &apos;ObjArray.Bus.java&apos;&#x0D;&#x0A;- Renamed element: &apos;ObjArray.BusArray.java&apos;" description="Rename compilation unit &apos;Bus.java&apos;" flags="2" id="org.eclipse.jdt.ui.rename.compilationunit" input="/src&lt;ObjArray{Bus.java" name="BusArray.java" references="false" stamp="1577623444200" version="1.0"/>
+</session>

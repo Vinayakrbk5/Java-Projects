@@ -1,0 +1,4 @@
+#NOTE: This is a Maven Resolver internal implementation file, its format can be changed without prior notice.
+#Mon Jun 15 16:40:00 IST 2020
+3be7fc9080fc5fd340bf5f5b3e1c0586882f1814@proxy.somewhere.com\:8080>@default-central-https\://repo.maven.apache.org/maven2/.lastUpdated=1592219400425
+https\://repo.maven.apache.org/maven2/.error=Could not transfer artifact org.apache.maven.plugins\:maven-clean-plugin\:pom\:2.5 from/to central (https\://repo.maven.apache.org/maven2)\: proxy.somewhere.com

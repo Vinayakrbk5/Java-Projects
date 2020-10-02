@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<classpath>
+	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER/org.eclipse.jdt.internal.debug.ui.launcher.StandardVMType/JavaSE-1.8"/>
+	<classpathentry kind="src" path="src"/>
+	<classpathentry kind="lib" path="C:/Users/AAKASH/Desktop/Java_Workspace/JarFile/antlr-3.1.1.jar"/>
+	<classpathentry kind="lib" path="C:/Users/AAKASH/Desktop/Java_Workspace/JarFile/dom4j-1.6.1.jar"/>
+	<classpathentry kind="lib" path="C:/Users/AAKASH/Desktop/Java_Workspace/JarFile/hibernate-commons-annotations-5.0.1.Final - Copy.jar"/>
+	<classpathentry kind="lib" path="C:/Users/AAKASH/Desktop/Java_Workspace/JarFile/hibernate-commons-annotations-5.0.1.Final.jar"/>
+	<classpathentry kind="lib" path="C:/Users/AAKASH/Desktop/Java_Workspace/JarFile/hibernate-core-5.0.4.Final.jar"/>
+	<classpathentry kind="lib" path="C:/Users/AAKASH/Desktop/Java_Workspace/JarFile/hibernate-jpa-2.1-api-1.0.0.Final.jar"/>
+	<classpathentry kind="lib" path="C:/Users/AAKASH/Desktop/Java_Workspace/JarFile/javaee.jar"/>
+	<classpathentry kind="lib" path="C:/Users/AAKASH/Desktop/Java_Workspace/JarFile/javassist-3.17.1-GA.jar"/>
+	<classpathentry kind="lib" path="C:/Users/AAKASH/Desktop/Java_Workspace/JarFile/jboss-logging-3.3.0.Final.jar"/>
+	<classpathentry kind="lib" path="C:/Users/AAKASH/Desktop/Java_Workspace/JarFile/mysql-connector-java-8.0.18.jar"/>
+	<classpathentry kind="output" path="bin"/>
+</classpath>

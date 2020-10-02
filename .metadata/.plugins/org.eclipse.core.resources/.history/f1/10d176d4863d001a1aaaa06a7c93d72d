@@ -1,0 +1,13 @@
+package AssignmentOnInterfaceToAbstractClassToClass;
+
+public abstract class Mammals implements Animals{
+	public void noise()
+	{
+		System.out.println("Animals are making noise");
+	}
+	public static String display()
+	{
+		return "Animals";
+	}
+	public abstract void birth();
+}

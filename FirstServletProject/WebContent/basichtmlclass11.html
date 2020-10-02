@@ -1,0 +1,192 @@
+<!Doctype html>
+<html>
+<head>
+<title>HTML Page</title>
+<style>
+
+th:hover{
+background:blue;
+}
+
+a:link{
+background:lightgreen;
+}
+
+td:hover{
+background:tomato;
+}
+
+tr:nth-child(even)
+{
+background:skyblue;
+}
+
+h1{
+border:2px solid green;
+width:100px;
+height:100px;
+float:left;
+}
+
+ul{
+list-style-type:none;
+text-align:center;
+background:green;
+border:2px dotted lavender;
+margin:0px;
+padding:0px;
+
+height:90px;
+cellpadding:0px;
+cellspacing:0px;
+
+}
+
+#vin{
+background:skyblue;
+width:100px;
+float:left;
+
+}
+
+.bhil{
+background:blue;
+width:100px;
+float:center;
+
+}
+
+.b{
+background:skyblue;
+width:100px;
+float:right;
+}
+
+li{
+padding:20px;
+margin:20px;
+display:inline-block;
+}
+
+li:hover{
+background:pink;
+}
+
+body{
+margin:0px;
+}
+
+div p{
+background:blue;
+}
+div>p{
+background:green;
+}
+div+p{
+background:red;
+}
+
+div~p{
+background:pink;
+}
+
+
+</style>
+</head>
+
+<body>
+
+
+<table>
+<thead>
+<tr>
+<th> Sl No </th>
+<th> Course Name </th>
+</tr>
+
+<tr>
+<th> Country </th>
+<th> City </th>
+</tr>
+
+<thead>
+
+<tbody>
+<tr>
+<td> 1 </td>
+<td> HTML </td>
+</tr>
+
+<tr>
+<td> 2 </td>
+<td> CSS </td>
+</tr>
+
+<tr>
+<td> 3 </td>
+<td> SQL </td>
+</tr>
+
+<tr>
+<td> 4 </td>
+<td> Java </td>
+</tr>
+
+</tbody>
+
+</table>
+
+
+
+<a href="#" target="-blank"> Facebook </a>
+<form>
+<label for="user">Enter Name</label>
+<input type="text" id="user">
+
+<label>Enter address</label>
+<input type="text">
+</form>
+
+<ul style="align:center" >
+<li id="vin">Home</li>
+<li class="bhil" id="vin">Location</li>
+
+<li class="b" id="vin" > address</li>
+</ul>
+
+<div><div>Descendtant Selector</div>
+<p> Karnataka </p>
+<p> Maharastra </p>
+<p> Kerala </p>
+<span> Bagalkot </span>
+<h4> Hi Hello </h4>
+</div>
+
+<div> 
+<div> Child Selector </div>
+<p> Vinayak </p>
+<p> Bhilawadi </p>
+<span> 
+<p> Rabkavi </p>
+</span>
+<h4> Hi Hello </h4>
+</div>
+
+<div> <div> Adjescent Sibling Selector </div>
+<p> Vinayak </p>
+<p> Bhilawadi </p>
+</div>
+
+<div> <div> General Sibling Selector </div>
+<p> Kashinath </p>
+<p> Ambedkar</p>
+</div>
+
+<p> Rahul </p>
+<p> Modi </p>
+<p> Joshi </p>
+
+<p> Bangalore </p>	
+
+</body>
+</html>

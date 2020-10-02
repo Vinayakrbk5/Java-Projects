@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Rename package &apos;TreeMap&apos; to &apos;TreeMapEx&apos;&#x0D;&#x0A;- Original project: &apos;Maps&apos;&#x0D;&#x0A;- Original element: &apos;Maps/src/TreeMap&apos;&#x0D;&#x0A;- Renamed element: &apos;Maps/src/TreeMapEx&apos;&#x0D;&#x0A;- Update references to refactored element&#x0D;&#x0A;- Update textual occurrences in comments and strings" description="Rename package &apos;TreeMap&apos;" flags="589830" hierarchical="false" id="org.eclipse.jdt.ui.rename.package" input="/src&lt;TreeMap" name="TreeMapEx" qualified="false" references="true" stamp="1586603119167" textual="false" version="1.0"/>
+</session>

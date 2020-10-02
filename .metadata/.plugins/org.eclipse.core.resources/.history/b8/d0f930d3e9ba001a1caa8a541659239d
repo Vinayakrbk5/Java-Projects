@@ -1,0 +1,9 @@
+package com.xworkz.filehandling;
+
+public class ByteStreamReadAndWrite {
+
+	public ByteStreamReadAndWrite() {
+		// TODO Auto-generated constructor stub
+	}
+
+}

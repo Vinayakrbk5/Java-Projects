@@ -1,0 +1,8 @@
+package com.xworkz.onetoone;
+
+import org.hibernate.SessionFactory;
+
+public class StudentUtil {
+
+	private static SessionFactory factory=null;
+}

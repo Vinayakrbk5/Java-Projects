@@ -1,0 +1,70 @@
+package IteratorExapmles;
+
+import java.util.ArrayList;
+import java.util.ConcurrentModificationException;
+import java.util.Iterator;
+import java.util.ListIterator;
+import java.util.NoSuchElementException;
+
+public class MobileTester {
+	public static void main(String[] args) {
+		ArrayList<Mobile> moblist = new ArrayList<>();
+		moblist.add(new Mobile("SmartPhone", 30000.00, "Samsung"));
+		moblist.add(new Mobile("KeyPad", 25000.00, "Nokia"));
+		moblist.add(new Mobile("Touch", 35000.00, "LG"));
+
+		System.out.println("Before ");
+		System.out.println(moblist);
+//		System.out.println("-------------------------------");
+//		for (Mobile i : moblist) {
+//			System.out.println(i);
+//		}
+//		try {
+//			for (Mobile i : moblist) {
+//				if (i.getBrand().equals("Samsung")) {
+//					moblist.remove(i);
+//				}
+//			}
+//		} catch (ConcurrentModificationException e) {
+//			System.out.println("This is ConcurrentModificationException");
+//		}
+//
+//		System.out.println("After Operation");
+//		for (Mobile j : moblist) {
+//			System.out.println(j);
+//		}
+
+		System.out.println("--------------------------------------------");
+		System.out.println("Using Iterator");
+//		try {
+			Iterator<Mobile> itr = moblist.iterator();
+			while (itr.hasNext()) {
+				Mobile m = itr.next(); // this is to declare that type m is of type Mobile bcz itr.next() is of type
+										// Mobile
+				System.out.println("m values are :" + m);
+				if (itr.next().equals("Nokia")) {
+					itr.remove();
+				}
+//			}
+//		} catch (NoSuchElementException e) {
+//			System.out.println("This is NoSuchElementException");
+//		}
+		System.out.println("After Operation");
+		for (Mobile i : moblist)
+			System.out.println(i);
+//		
+//		System.out.println("--------------------------------");
+//		System.out.println("using List Iterator");
+//		ListIterator<Mobile> listitr= moblist.listIterator();
+//		while(listitr.hasNext())
+//		{
+//			Mobile m=listitr.next();
+//		if(m.getBrand().equals("Samsung"))
+//			listitr.remove();
+//		}
+//		System.out.println("After Operation");
+//		for(Mobile i:moblist)
+//		
+//			System.out.println(i);
+	}
+}}

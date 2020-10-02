@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Rename resource &apos;DominosApp/WebContent/footer..html&apos; to &apos;footer.html&apos;" description="Rename resource &apos;footer..html&apos;" flags="7" id="org.eclipse.ltk.core.refactoring.rename.resource" input="WebContent/footer..html" name="footer.html" stamp="1590840275059" updateReferences="true"/>
+</session>

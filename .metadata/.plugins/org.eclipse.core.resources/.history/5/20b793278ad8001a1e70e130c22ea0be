@@ -1,0 +1,9 @@
+package com.xworkz.generator;
+
+public class Tester {
+
+	public Tester() {
+		// TODO Auto-generated constructor stub
+	}
+
+}

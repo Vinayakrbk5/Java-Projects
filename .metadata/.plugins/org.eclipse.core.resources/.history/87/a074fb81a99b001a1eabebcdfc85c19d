@@ -1,0 +1,98 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title> Grid System </title>
+<meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+</head>
+
+<style>
+#std,#name{
+width:30%;
+radius:10px;
+}
+#123{
+width:50%;
+}
+</style>
+</head>
+<body>
+
+
+
+<div class="container">
+<div class="jumbotron">
+<h1 Style="text-align:center;color:black;"> Educational Details </h1>
+</div>
+<form action="education" method="get">
+<div class="form-group">
+<label for="name"> Enter Name<b style="font-size:20px;color:red"> &nbsp*</b> :</label>
+<input type="text" id="name" class="form-control" required>
+</div>
+
+<div class="form-group">
+<label for=""> Select Standard<b style="font-size:20px;color:red"> &nbsp*</b> :</label>
+<select name="std" id="std1">
+<option value="none">none </option>
+<option value="1st Standard">1st Standard </option>
+<option value="2nd Standard">2nd Standard </option>
+<option value="3rd Standard">3rd Standard </option>
+<option value="4th Standard">4th Standard </option>
+<option value="5th Standard">5th Standard </option>
+<option value="6th Standard">6th Standard </option>
+<option value="7th Standard">7th Standard </option>
+<option value="8th Standard">8th Standard </option>
+<option value="9th Standard">9th Standard </option>
+<option value="10th Standard">10th Standard </option>
+</select>
+
+</div>
+
+<div class="form-group">
+<label> Enter Marks obtained in Each following Subjects <b style="font-size:20px;color:red"> &nbsp*</b>:</label>
+</div>
+
+<span>
+<label> Kannada:</label>
+<input type="number" min=1 max=100 class="form-control" style="width:7%" name="Kmark">
+
+<label> English:</label>
+<input type="number" min=1 max=100 class="form-control" style="width:7%" name="Emark">
+
+<label> Hindi:</label>
+<input type="number" min=1 max=100 class="form-control" style="width:7%" name="Hmark">
+
+</span>
+
+<div>
+<label> Mathematics:</label>
+<input type="number" min=1 max=100 class="form-control" style="width:7%"name="Mmark">
+
+<label> Science:</label>
+<input type="number" min=1 max=100 class="form-control" style="width:7%" name="Smark">
+
+<label> Social Science:</label>
+<input type="number" min=1 max=100 class="form-control"style="width:7%" name="SSmark">
+</div>
+
+<div><b style="font-size:20px;color:red"> * </b> <b>required</b></div>
+
+<div>
+<button type="submit" class="btn btn-success">Submit</button>
+<button type="reset" class="btn btn-danger"> Cancel </button>
+</div>
+
+</form>
+
+</div>
+
+
+
+
+
+</body>
+</html>

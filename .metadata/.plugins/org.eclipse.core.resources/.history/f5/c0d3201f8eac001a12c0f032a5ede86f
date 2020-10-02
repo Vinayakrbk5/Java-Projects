@@ -1,0 +1,85 @@
+package com.xworkz.tester;
+
+import java.text.SimpleDateFormat;
+import java.util.ArrayList;
+import java.util.Date;
+
+import com.xworkz.dto.SanitizerDTO;
+import com.xworkz.sanitizerservice.SanitizerService;
+import com.xworkz.sanitizerservice.SanitizerServiceImpl;
+import com.xworkz.singleton.SFSingleton;
+
+public class SanitizerTester {
+
+	public static void main(String[] args) {
+		try {
+
+			System.out.println("Start of main method");
+			SanitizerDTO sdto = new SanitizerDTO();
+
+//			SanitizerDAO sdao = new SanitizerDAOImpl();
+//			sdto = sdao.fetchByBrandName("Vibes");
+
+			SanitizerService servicedao = new SanitizerServiceImpl();
+//			sdto = servicedao.validateFetchByBrandName("Vibes");
+//			sdto = servicedao.validateFetchByBrandNameAndQuantity("Vibes", 80);
+//			System.out.println(sdto);
+
+//			String brandName = servicedao.validateFetchBrandNameByIdAndQuantity(4, 40);
+//			System.out.println("BrandName for id 4 is " + brandName);
+
+//			Integer id = servicedao.validateFetchIdByQuantityAndBrandName(40, "Appollo");
+//			System.out.println("Fetched id is :" + id);
+
+//			SimpleDateFormat dateFormat = new SimpleDateFormat("yyyy-MM-dd");
+//			String strDate = "2020/3/16";
+//			Date date = new Date();
+//			date.setMonth(3);
+//			date.setYear(120);
+//			date.setDate(16);
+//			System.out.println("before formatting :" + date);
+//			String newDate = dateFormat.format(date);
+
+//			System.out.println("after formatting :" + newDate);
+//			sdto = servicedao.validateFetchByBrandNameAndMFGDate("Appollo", newDate);
+//			System.out.println(sdto);
+
+			Long rowCount = servicedao.validateFetchCount();
+			System.out.println("Table has Total " + rowCount + " rows");
+
+			Long rCount = servicedao.validateFetchCountByPrice(new Double(25));
+			System.out.println(rCount + " row has price as 30/-");
+
+			Double maxPrice = servicedao.validateFetchMaxByPrice();
+			System.out.println("Maximum price amoung brands is " + maxPrice);
+
+			Double totalPrice = servicedao.validateFetchSumByPrice();
+			System.out.println("Sum of prices of total brands is " + totalPrice);
+
+			Double secMax = servicedao.validateFetchSecondMaxByPrice();
+			System.out.println("Second maximum price of the Sanitizer brand is " + secMax);
+
+			int id = 1;
+//			@SuppressWarnings("unchecked")
+//			ArrayList<Object> arrList = (ArrayList<Object>) servicedao.validateFetchBrandAndPriceById(id);
+//			if (arrList.size() != 0) {
+//				System.out.println("Sanitizer Brand Name for id= " + id + " is " + arrList.get(0));
+//				System.out.println("Sanitizer Price for " + id + " is " + arrList.get(1));
+//			} else {
+//				System.out.println("Object returned is null");
+//			}
+			Object[] obj=(Object[]) servicedao.validateFetchBrandAndPriceById(id);
+			System.out.println("brand name="+obj[0]);
+			System.out.println("It's price "+obj[1]);
+
+			System.out.println("End of main method");
+
+		} catch (Exception e) {
+			System.err.println("Something went wrong in getting values in main method");
+		} finally {
+			SFSingleton.closeSF();
+		}
+
+	}
+
+}

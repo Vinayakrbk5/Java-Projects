@@ -1,0 +1,45 @@
+package com.xworkz.onetoone;
+
+import javax.persistence.Entity;
+import javax.persistence.Id;
+import javax.persistence.Table;
+
+@Entity
+@Table(name="STUDENT_DETAILS12")
+public class StudentDetailsDTO {
+	@Id
+	private int stId;
+	private String phoneNumber;
+	
+
+	public StudentDetailsDTO() {
+		System.out.println("created "+this.getClass().getSimpleName());
+	}
+
+
+	public int getStId() {
+		return stId;
+	}
+
+
+	public void setStId(int stId) {
+		this.stId = stId;
+	}
+
+
+	public String getPhoneNumber() {
+		return phoneNumber;
+	}
+
+
+	public void setPhoneNumber(String phoneNumber) {
+		this.phoneNumber = phoneNumber;
+	}
+
+
+	@Override
+	public String toString() {
+		return "StudentDetailsDTO [stId=" + stId + ", phoneNumber=" + phoneNumber + "]";
+	}
+
+}
